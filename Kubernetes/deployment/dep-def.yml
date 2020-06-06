@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: httpd-frontend
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      name: busybox-pod
+  template:
+    metadata:
+      labels:
+        name: busybox-pod
+    spec:
+      containers:
+      - name: busybox-container
+        image: httpd:2.4-alpine
+        command:
+        - sh
+        - "-c"
+        - echo Hello Kubernetes! && sleep 3600master
