@@ -1,2 +1,2 @@
 # Random-Algorithms
-A repository to upload the random things I do.
+Repository to upload random things I do.
